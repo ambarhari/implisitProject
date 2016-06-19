@@ -1,7 +1,14 @@
 import {Component} from '@angular/core';
+import {iatTestComponent} from "./component/iat-test/iat-test.component";
+
 
 @Component({
     selector: 'my-app',
-    template: '<h1>My First Angular 2 App</h1>'
+    template: `<iat-test></iat-test>`,
+    directives: [iatTestComponent]
 })
-export class AppComponent { }
+export class AppComponent {
+
+
+
+}
