@@ -24,16 +24,18 @@ import {iatClueTextComponent} from "./iat-clue-text.component";
             .iat-clue-list{
             display:flex;
             flex-direction:row;
-            align-items: stretch;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
             vertical-align: center;
+            width: 100%;
           }
           
           .list {
-            padding: 3pt;
-            width:30%;
-            color:white;
-            height: 3%;
+            flex-grow: 1;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            padding: 2px;
             vertical-align: middle;
           }
   `],

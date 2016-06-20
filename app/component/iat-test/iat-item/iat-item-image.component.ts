@@ -5,7 +5,7 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'iat-item-image',
-  template: `<img src={{getpath(masuk.nilai)}} height="175">`,
+  template: `<img src={{getpath(masuk.nilai)}} height="300">`,
   inputs:["masuk"]
 })
 export class iatItemImageComponent {

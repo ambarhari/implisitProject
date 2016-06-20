@@ -8,9 +8,10 @@ import {Component} from '@angular/core';
   inputs:["isi","pos"],
   styles:[`
     .list{
-      flex-grow:1;
-      height:100%;
       vertical-align: middle;
+      padding: 5px;
+      color: white;
+      text-transform: uppercase;
     }
     .center{
       text-align: center;
