@@ -11,24 +11,41 @@ import {iatClueTextComponent} from "./iat-clue-text.component";
   selector: 'iat-clue',
   template: `<div class="iat-clue-list">
                 <div class="list">
-                 <iat-clue-text [isi]="data[0][0]" [pos]="'left'"></iat-clue-text>
-                 <iat-clue-text [isi]="data[0][1]"></iat-clue-text>
+                 <iat-clue-text *ngFor="let itemLeft of leftvalue" [isi]="itemLeft" pos="left"></iat-clue-text>
                 </div>
                 <div class="list">
-                  <iat-clue-text></iat-clue-text>
+                  <iat-clue-text [isi]="centervalue" pos="center"></iat-clue-text>
                 </div>
                 <div class="list">
-                  <iat-clue-text [isi]="data[1][0]"></iat-clue-text>
-                  <iat-clue-text [isi]="data[1][1]"></iat-clue-text>
+                  <iat-clue-text *ngFor="let itemRight of rightvalue" [isi]="itemRight" pos="right"></iat-clue-text>
                 </div>
             </div>`,
-  styleUrls:["app/component/iat-test/iat-clue/iat-clue.css"],
+  styles:[`
+            .iat-clue-list{
+            display:flex;
+            flex-direction:row;
+            align-items: stretch;
+            justify-content: space-between;
+            vertical-align: center;
+          }
+          
+          .list {
+            padding: 3pt;
+            width:30%;
+            color:white;
+            height: 3%;
+            vertical-align: middle;
+          }
+  `],
   directives:[iatClueTextComponent]
 })
 export class iatClueComponent {
 
-  leftvalue=["left1", "right1"];
-  rightvalue=["right1", "right2"];
+  leftvalue=["left1","OR", "left2"];
+  rightvalue=["right1", "OR" ,"right2"];
+  ronde=1;
+  centervalue= this.ronde + "/7";
+
 
   data= [
     ["GOOD", "ITEMA"],

@@ -2,14 +2,15 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'iat-clue-text',
-  template: `<div class="list">
-                {{isi}}{{pos}}
+  template: `<div class="list" [style.text-align]="pos">
+                {{isi}}
             </div>`,
   inputs:["isi","pos"],
   styles:[`
     .list{
       flex-grow:1;
       height:100%;
+      vertical-align: middle;
     }
     .center{
       text-align: center;
